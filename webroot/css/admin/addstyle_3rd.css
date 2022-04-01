@@ -1,0 +1,542 @@
+@charset "UTF-8";
+/**
+ * admin-third管理テーマレスポンシブ対応
+ */
+ 
+/* 意図しないオーバーフローを調整、等（768px以上を意図する） */
+body {
+  min-width: initial;
+  -webkit-text-size-adjust: 100%;
+}
+.bca-app {
+  min-height: calc(100vh - 40px) !important;
+}
+
+/* ダッシュボードパネルのレイアウト調整、等（768px以上を意図する） */
+.bca-panel {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.bca-panel > * {
+  width: 100%;
+  max-width: 450px;
+  min-width: calc(100% / 3 - 20px);
+}
+
+/* アップローダーパネルのレイアウト崩れ修正（768px以上を含む） */
+#DivPanelList .file-list-body .selectable-file {
+  height: auto !important; 
+}
+
+/* バルーンチップのウィンドウ幅調整（768px以上を含む） */
+.bt-content {
+  max-width: 400px;
+}
+
+/* 基本カラーの変更に備えてログインボタンのボーダーをキャンセル（768px以上を含む） */
+.bca-btn-icon[data-bca-btn-type=login],
+.bca-btn-icon-text[data-bca-btn-type=login],
+.bca-btn[data-bca-btn-type=login] {
+  border: none;
+}
+.bca-btn-icon[data-bca-btn-type=login]:hover,
+.bca-btn-icon[data-bca-btn-type=login]:focus,
+.bca-btn-icon-text[data-bca-btn-type=login]:hover,
+.bca-btn-icon-text[data-bca-btn-type=login]:focus,
+.bca-btn[data-bca-btn-type=login]:hover,
+.bca-btn[data-bca-btn-type=login]:focus {
+  transition: none;
+}
+
+
+@media screen and (max-width: 768px) {
+/* flexレイアウトに変更。オーバーフローの横方向スクロールを実現するためgridレイアウトを中止 */
+.bca-app {
+  display: flex;
+  flex-flow: column;
+  min-height: calc(100vh - 40px);
+} 
+.bca-container {
+  flex: 1;
+}
+
+/* コンテンツボックスを最大幅表示 */
+.bca-main__contents {
+  margin: 0;
+}
+
+/* 各種リスト等のオーバーフローの横スクロール対応 */
+.bca-data-list {
+  overflow-x: scroll;
+}
+.jstree-proton {
+  overflow-x: scroll;
+}
+
+/* ウイジェット編集画面のレイアウト調整 */ 
+.bca-main__contents {
+  overflow-x: scroll;
+}
+#WidgetSetting {
+  width: 700px !important;
+  padding-right: 20px;  
+}
+  
+/* CKEditorのダイアログ表示幅を調整 */
+.cke_dialog {
+  max-width: 480px !important;
+}
+.cke_dialog_page_contents {
+  max-width: 460px !important;
+  overflow-x: scroll;
+}
+
+/* ボタンの上下マージン */ 
+.bca-btn,
+.ui-dialog-buttonset button,
+.button-small {
+  margin: 5px auto;
+}
+
+/* 検索フィールドのラベルマージン */ 
+.bca-search__input-item-label {
+  margin: 4px 0 0 4px;
+}
+
+/* ブログアイキャッチ画像 */ 
+.bca-file__figure {
+  margin: 10px auto;
+}
+
+/* セクションのテーブルをコラム化 */ 
+.bca-form-table tr {
+  display: flex;
+  flex-flow: column;
+}
+
+/* ブログ公開日時レイアウト */
+.bca-datetimepicker__date-input,
+.bca-datetimepicker__time-input {
+  display: block;
+}
+
+/* ラベル関連 */
+.bca-form-table__input {
+  padding: 0 0 1em;
+}
+.bca-form-table__label {
+  border-bottom: none;
+}
+
+/* ツールバーのサーバーキャッシュクリアをアイコン化 */
+.bca-toolbar__users > ul > li:nth-child(2) a {
+  font-size:0;
+  background: #2a332c !important;
+  transition: none !important;
+}
+.bca-toolbar__users > ul > li:nth-child(2) a:hover {
+  background-color: #444 !important;
+}
+.bca-toolbar__users > ul > li:nth-child(2) a::before {
+  content: "\f021";
+  font-family: 'Font Awesome 5 Free';
+  font-size:12px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* ツールバーの「確認する」表示のアイコン化 */
+.bca-toolbar__tools-button a {
+  font-size: 0;
+  background: none !important;
+  transition: none;
+}
+.bca-toolbar__tools-button a:hover {
+  background: none !important;
+}
+/* 改良 */
+.bca-toolbar__tools-button-publish a::before {
+  content: "\f06e";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+  padding: 4px;
+  font-size: 10px !important;
+  color: #333 !important;
+  background-color: #fff !important;
+  border-radius: 50%;
+background-image: none !important;
+width: initial !important;
+height: initial !important;
+}
+.bca-toolbar__tools-button-publish a:hover::before {
+  background-color: #ccc !important;
+  transition: all 0.5s ease;
+}
+
+/* 改良　ツールバーのロゴレイアウト調整 */
+.bca-toolbar .bca-toolbar__logo {
+  padding: 0 12px 0 12px !important;
+}
+
+/* 改良　固定ページ編集　関連コンテンツ横スクロール */
+.bca-collapse {
+  overflow-x: scroll;
+}
+
+/* サイドメニューの幅固定 */
+.bca-nav__sub-list {
+  max-width: 175px;
+  min-width: 175px;
+}
+.bca-nav__system-sub-list {
+  max-width: 175px;
+  min-width: 175px;
+}
+
+/* サイドメニュー表示、非表示 */
+.normal.close .bca-nav {
+  left: -175px;
+  width: 175px;
+  height: 100%;
+  display: block;
+  position: absolute;
+animation: slide .5s ease;
+}
+@keyframes slide {
+  0% {
+    left: 0;
+    display: block;
+  }
+  100% {
+    left: -175px;
+    display: none;
+  }
+}
+.normal.open .bca-nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 175px;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  font-size: 1.4rem;
+  background: #eeeeea;
+animation: slide2 .5s ease;
+  z-index: 3;
+}
+@keyframes slide2 {
+  0% {
+    left: -175px;
+    display: none;
+  }
+  100% {
+    left: 0;
+    display: block;
+  }
+}
+.normal .bca-nav{
+  position: absolute;
+  left: -175px;
+  width: 175px;
+  height: 100%;
+  display: none;
+}
+
+/* サイドメニュー表示時の横スクロール禁止 */
+html {
+  overflow: auto;
+}
+body.open {
+  overflow-x: hidden;
+}
+
+/* サイドメニューの折り返し許可 */
+.bca-nav__system-sub-list-item a {
+  white-space: normal;
+}
+
+/* サイドメニューのコンテンツリスト整形 */
+.bca-nav__sub-list-item a {
+  padding: 7px 10px 5px 35px;
+}
+.bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item a {
+  padding: 6px 10px 5px 35px;
+}
+.bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a {
+  padding: 13px 10px 11px 35px;
+}
+
+/* サイドメニュー表示、非表示用のトグルボタン追加 */
+.toggle_btn {
+  display: block;
+  position: fixed;
+  left: 20px;
+  width: 22px;
+  height: 26px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+}
+.toggle_btn span:nth-child(1) {
+  top: -7px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  left: -12px;
+  border-radius: 20px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 4px;
+  transform: translate(3px,3px) rotate(45deg);
+}
+.toggle_btn span:nth-child(3) {
+  top: 12px;
+}
+.toggle_btn span:nth-child(4) {
+  bottom: 4px;
+  transform: translate(3px,-3px) rotate(135deg);
+}
+.open .toggle_btn {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  left: 195px;
+}
+.open .toggle_btn span:nth-child(2), .open .toggle_btn span:nth-child(4) {
+  width: 16px;
+}
+.open .toggle_btn span:nth-child(2) {
+  -webkit-transform: translate(-3px,3px) rotate(-45deg);
+  transform: translate(-3px,3px) rotate(-45deg);
+}
+.open .toggle_btn span:nth-child(4) {
+  -webkit-transform: translate(-3px,-3px) rotate(45deg);
+  transform: translate(-3px,-3px) rotate(45deg);
+}
+
+/* サイドメニュー表示時の本文マスク処理追加 */
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* サイドメニュー内バナーサイズ、レイアウト、背景調整 */
+.bca-banners__li img {
+  width: 100%;
+}
+.bca-banners__li {
+  padding-left: 2px;
+  padding-right: 2px;
+  list-style: none;
+}
+.bca-banners__ul {
+  padding: 10px 0;
+  margin: 0;
+  background: #eeeeea;
+}
+
+/* ダッシュボードパネルの調整 */
+.bca-panel {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.bca-panel > * {
+  width: 100%;
+  max-width: 100%; 
+}
+
+/* ダッシュボード内タイトルの調整 */
+.bca-main__header-title {
+  margin: 0 1em 0 40px;
+}
+.bca-list-head {
+  flex-direction: column;
+}
+
+/* 一覧リスト周辺のレイアウト調整 */
+.bca-data-list__top {
+  min-width: 600px;
+  margin-bottom: 10px !important;
+}
+.bca-data-list__top {
+  display: block;
+}
+.bca-panel-box {
+  padding: 20px !important;
+  margin-bottom: 10px !important;
+}
+}
+
+
+@media screen and (max-width: 499px) {
+/* バルーンチップのウィンドウ幅調整（768px以上を含む） */
+.bt-content {
+  max-width: 330px !important;
+}
+
+/*　一般ダイアログメッセージの最大幅指定 */
+.ui-dialog {
+  max-width: 330px !important;
+}
+
+/* CKEditorのダイアログ表示幅を調整 */
+.cke_dialog {
+  max-width: 330px !important;
+}
+.cke_dialog_contents_body {
+  max-width: 330px !important;
+  max-height: 400px !important;
+}
+.bca-search__input-list .bca-textbox {
+  display: inline-block !important;
+}
+#DivPanelList {
+  min-width: 605px;
+}
+
+/* input、textarea等の表示幅調整 */
+.bca-textbox__input,
+.bca-textarea__textarea {
+width: 100% !important;
+}
+.bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-select,
+.bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textbox,
+.bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textarea {
+margin-left: 0;
+}
+.bca-textbox__input,
+.bca-select__select,
+.bca-textarea__textarea {
+margin-left: 0;
+}
+.bca-file__delete {
+margin: .5em 0;
+}
+
+/* ラベルのpadding調整 */
+.bca-form-table__inner-table-label {
+  padding: 0;
+}
+
+/* フッターのレイアウト調整 */
+.bca-footer__inner--full {
+  flex-direction: column-reverse;
+}
+.bca-footer__sub {
+  margin-bottom: 7px;
+}
+
+/* 改良 */
+.bca-textbox {
+  display: initial;
+}
+
+.bca-panel-box__inline-fields {
+  flex-direction: column;
+}
+
+.bca-panel-box__inline-fields {
+  flex-direction: column;
+}
+
+/* 保存ボタン等のレイアウト */
+.bca-actions {
+  flex-direction: column;
+}
+.bca-actions__before {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+}
+  .bca-actions__sub {
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  border-left: none;
+  border-top: 1px solid #ccc;
+}
+
+/* 公開日時レイアウト調整 */
+.bca-datetimepicker__date-input,
+.bca-datetimepicker__time-input {
+  margin: 4px 0 !important;
+}
+
+/* トグルボタンのレイアウト調整 */
+.toggle_btn {
+  top: 56px;
+}
+
+/* ダッシュボードパネルのヘッダーレイアウト調整 */
+.bca-main__header {
+  flex-direction: column;
+  align-items: normal;
+}
+.bca-main__header-actions {
+  margin-left: 40px;
+}
+.bca-content-menu ul {
+  padding-inline-start: 0px;
+  margin-left: calc(40px - 1em);
+}
+
+/* ツールバーのユーザーリスト、サーバーキャッシュクリア表示のレイアウト調整 */
+.bca-toolbar__users > ul > li > a {
+  padding: 2px 12px !important;
+}
+
+/* ツールバーのロゴテキストを非表示 */
+.bca-toolbar .bca-toolbar__logo-text {
+  display: none !important;
+}
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+}
+
+/* ツールバーの開発モード表示の簡素化 */
+.bca-toolbar__tools-mode span {
+  padding: 0 !important;
+  font-size: 0;
+  background: none !important;
+}
+.bca-toolbar__tools-mode span::before {
+  content: "開発モード";
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  background-color: red;
+  padding: 3px 8px;
+  border-radius: 11px;
+}
+
+/* ツールバーのシンボルロゴのマージン調整 */
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
+}

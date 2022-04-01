@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/**
+ * admin-third管理テーマログイン画面用
+ */
+
+ 
+/* 意図しないオーバーフローを調整、等（768px以上を意図する） */
+body {
+  min-width: initial;
+  -webkit-text-size-adjust: 100%;
+}
+.bca-app {
+  min-height: calc(100vh - 40px) !important;
+}
+
+@media screen and (max-width: 768px) {
+/* gridレイアウトをflexレイアウトに変更 */
+.bca-app {
+  display: flex;
+  flex-flow: column;
+  min-height: calc(100vh - 40px);
+}
+
+/* ログイン画面のレイアウト調整 */
+.bca-login {
+  margin: 20px auto;
+  padding: 30px 25px;
+  max-width: max-content !important;
+}
+
+/* フッター幅調整 */
+.bca-footer__inner {
+  min-width: auto;
+}
+
+/* ツールバーのサーバーキャッシュクリアをアイコン化 */
+.bca-toolbar__users > ul > li:nth-child(2) a {
+  font-size:0;
+  background: #2a332c !important;
+  transition: none !important;
+}
+.bca-toolbar__users > ul > li:nth-child(2) a:hover {
+  background-color: #444 !important;
+}
+.bca-toolbar__users > ul > li:nth-child(2) a::before {
+  content: "\f021";
+  font-family: 'Font Awesome 5 Free';
+  font-size:12px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.bca-toolbar__tools-mode span {
+  padding: 3px 8px !important;
+}
+  
+/* ツールバーの編集する表示のアイコン化 */
+.bca-toolbar__tools-button a {
+  font-size: 0;
+  background: none !important;
+  transition: none;
+}
+.bca-toolbar__tools-button a:hover {
+  background: none !important;
+}
+.bca-toolbar__tools-button-edit a::before {
+  padding: 4px;
+  font-size: 10px !important;
+  color: #333;
+  background-color: #fff !important;
+  border-radius: 50%;
+}
+.bca-toolbar__tools-button-edit a:hover::before {
+  background-color: #ccc !important;
+  transition: all 0.5s ease;
+}
+
+/* ツールバーの「確認する」表示のアイコン化 */
+.bca-toolbar__tools-button a {
+  font-size: 0;
+  background: none !important;
+  transition: none;
+}
+.bca-toolbar__tools-button a:hover {
+  background: none !important;
+}
+.bca-toolbar__tools-button-publish a::before {
+  padding: 4px;
+  font-size: 10px !important;
+  color: #333;
+  background-color: #fff !important;
+  border-radius: 50%;
+}
+.bca-toolbar__tools-button-publish a:hover::before {
+  background-color: #ccc !important;
+  transition: all 0.5s ease;
+}
+}
+
+
+@media screen and (max-width: 499px) {
+/* ログイン画面、状態保存チェックボックス周りレイアウト調整 */
+.bca-login .bca-login-form-ctrl {
+  align-items: normal;
+  flex-direction: column;
+}
+
+/* ログイン画面のタイトル調整 */
+.bca-login__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* ログイン画面のロゴ幅変更 */
+.bca-login__logo {
+  max-width: 230px;
+  width: 100%;
+}
+
+/* ツールバーのユーザーリスト、サーバーキャッシュクリア表示のレイアウト調整 */
+.bca-toolbar__users > ul > li > a {
+  padding: 2px 12px !important;
+}
+
+/* ツールバーのロゴテキストを非表示 */
+.bca-toolbar .bca-toolbar__logo-text {
+  display: none !important;
+}
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+}
+
+/* ツールバーのシンボルロゴのマージン調整 */
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ツールバーの開発モード表示の簡素化 */
+.bca-toolbar__tools-mode span {
+  padding: 0 !important;
+  font-size: 0;
+  background: none !important;
+}
+.bca-toolbar__tools-mode span::before {
+  content: "開発モード";
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  background-color: red;
+  padding: 3px 8px;
+  border-radius: 11px;
+}
+}
