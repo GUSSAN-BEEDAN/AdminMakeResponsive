@@ -23,7 +23,7 @@ v.4.4.8以前のバージョンでは、cssの内容が現状とはだいぶ違�
 1. 圧縮ファイルを解凍後、生成されたフォルダ名 AdminMakeResponsive［-masterやバージョン名］を AdminMakeResponsive にリネームし、/app/Plugin/AdminMakeResponsive として配置します。
 2. 管理画面のプラグイン管理に入り、表示されている AdminMakeResponsive プラグイン をインストールして下さい。
 3. プラグインのインストール後、AdminMakeResponsive 管理ページにアクセスします。
-4. admin-third管理テーマをレスポンシブ化させる場合は、有効にする にチェックを入れて保存してください。(インストール時は、チェック済みです。）
+4. admin-third管理テーマをレスポンシブ化させる場合は、有効にする にチェックを入れて保存してください。
 
 
 ## ご注意

@@ -1,4 +1,4 @@
 <?php 
-$this->BcBaser->css(array('AdminMakeResponsive.admin/addstyle_agr'), array('inline' => false)); 
-$this->BcBaser->js(array('AdminMakeResponsive.admin/addjs_agr'), false); 
+$this->BcBaser->css(['AdminMakeResponsive.admin/addstyle_agr'], ['inline' => false]); 
+$this->BcBaser->js(['AdminMakeResponsive.admin/addjs_agr'], false); 
 ?>

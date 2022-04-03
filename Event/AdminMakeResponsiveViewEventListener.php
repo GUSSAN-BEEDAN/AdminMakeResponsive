@@ -1,8 +1,8 @@
 <?php 
 class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
-	public $events = array(
+	public $events = [
 		'beforeLayout',
-	);
+	];
 	public function beforeLayout(CakeEvent $event) {
 			$View = $event->subject();
 			App::import('Model', 'AdminMakeResponsive.AdminMakeResponsive');
@@ -16,29 +16,29 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 				&&(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
 				){
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addfiles',array('setdatas' => $setdatas));
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			} else if (Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third'){
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',array('setdatas' => $setdatas));
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			} else {
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_addfiles',array('setdatas' => $setdatas));
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			}
 		} else {
 			if (Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third') {
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',array('setdatas' => $setdatas));
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			} else {
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_toolbar_addfiles',array('setdatas' => $setdatas));
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			}

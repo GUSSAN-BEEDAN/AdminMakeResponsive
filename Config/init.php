@@ -1,2 +1,2 @@
 <?php 
-$this->Plugin->initDb('plugin', 'AdminMakeResponsive');
+$this->Plugin->initDb('AdminMakeResponsive');

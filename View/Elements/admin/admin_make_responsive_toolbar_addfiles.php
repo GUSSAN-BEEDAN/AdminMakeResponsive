@@ -1,3 +1,3 @@
 <?php 
-$this->BcBaser->css(array('AdminMakeResponsive.admin/addstyle_3rd_toolbar'), array('inline' => false)); 
+$this->BcBaser->css(['AdminMakeResponsive.admin/addstyle_3rd_toolbar'], ['inline' => false]); 
 ?>

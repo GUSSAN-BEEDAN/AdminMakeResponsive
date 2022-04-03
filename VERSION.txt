@@ -1,5 +1,12 @@
-1.0.0
+1.0.1
+
 // Release Notes //
 
+[2022-04-03] AdminMakeResponsive-1.0.1
+- 配列のarray()を[]に変更
+- init.phpのinitDb修正
+- スキーマファイルの見直し
+- 有効化チェックボックスを初期設定をオフに変更
+
 [2022-04-01] AdminMakeResponsive-1.0.0
- 初版リリース
+- 初版リリース

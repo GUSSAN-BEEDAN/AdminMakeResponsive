@@ -3,19 +3,19 @@ App::import('Controller', 'Plugins');
 #class AdminMakeResponsiveController extends BcPluginAppController {
 class AdminMakeResponsiveController extends AppController {
 	public $name = 'AdminMakeResponsive';
-	public $uses = array('Plugin', 'Content', 'AdminMakeResponsive.AdminMakeResponsive');
-	public $components = array('BcAuth','Cookie','BcAuthConfigure');
+	public $uses = ['Plugin', 'Content', 'AdminMakeResponsive.AdminMakeResponsive'];
+	public $components = ['BcAuth','Cookie','BcAuthConfigure'];
 	public function admin_index() {
-		if(empty($this->request->data)) {
+		if (empty($this->request->data)) {
 			$this->data = $this->AdminMakeResponsive->find('first');
-		}else{
+		} else {
 			$this->AdminMakeResponsive->set($this->request->data['AdminMakeResponsive']);
 			$id = $this->request->data['AdminMakeResponsive']['id'];
-			if ($this->AdminMakeResponsive->save(array('conditions' => array('id' => $id)))) {
+			if ($this->AdminMakeResponsive->save(['conditions' => ['id' => $id]])) {
 				$message = '設定を更新しました。';
 				$this->setMessage($message, false, true);
 				clearViewCache();
-				$this->redirect(array('controller' => 'admin_make_responsive', 'action' => 'index'));
+				$this->redirect(['controller' => 'admin_make_responsive', 'action' => 'index']);
 			} else {
 				$this->setMessage('エラーです。確認して下さい。', true);
 			}

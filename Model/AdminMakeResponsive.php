@@ -1,13 +1,5 @@
 <?php
 /**
- * AdminMakeResponsive プラグイン
- * 
- * @link			https://github.com/GUSSAN-BEEDAN
- * @author			GUSSAN(beedan)
- * @license			MIT
- */
-
-/**
  * Include posts
  */
 class AdminMakeResponsive extends AppModel {
@@ -23,9 +15,9 @@ class AdminMakeResponsive extends AppModel {
  */
 	function getEnable(){
 		$getEnable = null;
-		$data = array();
+		$data = [];
 		$data = $this->find('first');
-		if(
+		if (
 			(isset($data['AdminMakeResponsive']))
 			&&(isset($data['AdminMakeResponsive']['flg_enable']))
 			){
@@ -40,9 +32,9 @@ class AdminMakeResponsive extends AppModel {
  */
 	function getSetdatas(){
 		$getSetdatas = null;
-		$data = array();
+		$data = [];
 		$data = $this->find('first');
-		if(
+		if (
 			(isset($data['AdminMakeResponsive']))
 			){
 			$getSetdatas = $data['AdminMakeResponsive'];
