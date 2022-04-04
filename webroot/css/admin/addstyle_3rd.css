@@ -389,6 +389,16 @@ body.open {
   padding: 20px !important;
   margin-bottom: 10px !important;
 }
+.bca-data-list__bottom {
+  display: block;
+  min-width: 600px;
+}
+.bca-pagination {
+  text-align: left;
+}
+.bca-list-num {
+  justify-content: flex-start;
+}
 }
 
 
