@@ -44,3 +44,12 @@ v.4.4.8以前のバージョンでは、cssの内容が現状とはだいぶ違�
 Copyright (c) 2022 GUSSAN(beedan)
 Released under the MIT license
 https://opensource.org/licenses/mit-license.php
+
+また、このプラグインの主要なデザインは、daruma&namio(tsukurun)さんの「AdminGoResponsive」プラグインを参考にしており、「AdminGoResponsive」プラグインに記載のライセンス表記と同様のライセンスが適用されます。
+
+以下は、daruma&namio(tsukurun)さん製作の「AdminGoResponsive」プラグインに記載されたオリジナルのライセンスです。
+
+ @link			http://www.tsukurun.co.jp/
+ @link			http://web-model.com/
+ @author			daruma&namio(tsukurun)
+ @license			MIT
