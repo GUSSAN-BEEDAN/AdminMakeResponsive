@@ -68,7 +68,10 @@ body {
 }
 
 /* 各種リスト等のオーバーフローの横スクロール対応 */
+/* コメント一覧等で、コメントの文字数が多い場合、リストが縦に長くなってしまうのを防止。*/
 .bca-data-list {
+  width: max-content;
+  max-width: 900px;
   overflow-x: scroll;
 }
 .jstree-proton {
@@ -183,6 +186,11 @@ height: initial !important;
 /* 改良　固定ページ編集　関連コンテンツ横スクロール */
 .bca-collapse {
   overflow-x: scroll;
+}
+
+/* サイドバーお気に入り内のタッチアクション有効 */
+.bca-nav-favorite-list-item {
+  touch-action: initial !important;
 }
 
 /* サイドメニューの幅固定 */
