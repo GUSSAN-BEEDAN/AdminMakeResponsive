@@ -210,6 +210,9 @@ height: initial !important;
 .bca-toolbar .bca-toolbar__logo {
   padding: 0 12px 0 12px !important;
 }
+.bca-toolbar__tools-edit a {
+  margin: 8px 0;
+}
 .bca-toolbar .bca-toolbar__logo-symbol {
   border: none !important;
   padding: 0 !important;

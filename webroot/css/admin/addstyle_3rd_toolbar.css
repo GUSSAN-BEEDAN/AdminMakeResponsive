@@ -69,6 +69,14 @@ body {
   padding: 0 !important;
   margin-right: 0 !important;
 }
+
+/* ツールバーのロゴ周りマージン等の調整 */
+.bca-toolbar .bca-toolbar__logo {
+  padding: 0 12px 0 12px !important;
+}
+.bca-toolbar__tools-edit a {
+  margin: 8px 0;
+}
   
 /* ツールバーの「編集する」表示のアイコン化 */
 .bca-toolbar__tools-button a {
@@ -115,14 +123,6 @@ body {
 /* ツールバーのユーザーリスト、サーバーキャッシュクリア表示のレイアウト調整 */
 .bca-toolbar__users > ul > li > a {
   padding: 2px 12px !important;
-}
-
-/* ツールバーのロゴ周りマージン等の調整 */
-.bca-toolbar .bca-toolbar__logo {
-  padding: 0 12px 0 12px !important;
-}
-.bca-toolbar__tools-edit a {
-  margin: 8px 0;
 }
 
 /* ツールバーの開発モード表示の簡素化 */
