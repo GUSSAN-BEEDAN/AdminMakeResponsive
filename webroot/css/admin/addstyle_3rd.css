@@ -2,7 +2,8 @@
 /**
  * admin-third管理テーマレスポンシブ対応
  */
- 
+
+
 /* 意図しないオーバーフローを調整、等（768px以上を意図する） */
 body {
   min-width: initial;
@@ -62,20 +63,47 @@ body {
   flex: 1;
 }
 
+/* クレジット画面のレイアウトの修正 */
+#CreditScrollerInner {
+  width: auto;
+}
+#CreditScroller ul {
+  padding-left: 0;
+}
+
 /* コンテンツボックスを最大幅表示 */
 .bca-main__contents {
   margin: 0;
 }
 
+/* コンテンツ一覧等のパネルボックスのレイアウト調整 */
+.bca-panel-box__inline-fields-separator {
+  width: 2em;
+  background: none;
+  margin: 0;
+}
+.bca-panel-box__inline-fields-item {
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: .5em;
+}
+.bca-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
 /* 各種リスト等のオーバーフローの横スクロール対応 */
-/* コメント一覧等で、コメントの文字数が多い場合、リストが縦に長くなってしまうのを防止。*/
 .bca-data-list {
-  width: max-content;
-  max-width: 900px;
   overflow-x: scroll;
 }
 .jstree-proton {
   overflow-x: scroll;
+}
+
+/* コメント一覧等で、コメントの文字数が多い場合、リストが縦に長くなってしまうのを防止。*/
+.bca-table-listup {
+  width: max-content;
+  max-width: 900px;
 }
 
 /* ウイジェット編集画面のレイアウト調整 */ 
@@ -159,7 +187,7 @@ body {
 .bca-toolbar__tools-button a:hover {
   background: none !important;
 }
-/* 改良 */
+/* v4.4.8以前のバージョンに対応 */
 .bca-toolbar__tools-button-publish a::before {
   content: "\f06e";
   font-family: 'Font Awesome 5 Free';
@@ -178,17 +206,30 @@ height: initial !important;
   transition: all 0.5s ease;
 }
 
-/* 改良　ツールバーのロゴレイアウト調整 */
+/* ツールバーのロゴ周りレイアウト調整等 */
 .bca-toolbar .bca-toolbar__logo {
   padding: 0 12px 0 12px !important;
 }
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
 
-/* 改良　固定ページ編集　関連コンテンツ横スクロール */
+/* ツールバーのロゴテキストを非表示 */
+.bca-toolbar .bca-toolbar__logo-text {
+  display: none !important;
+}
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+}
+
+/* 固定ページ編集　関連コンテンツ横スクロール */
 .bca-collapse {
   overflow-x: scroll;
 }
 
-/* サイドバーお気に入り内のタッチアクション有効 */
+/* サイドメニューお気に入り内のタッチアクション有効 */
 .bca-nav-favorite-list-item {
   touch-action: initial !important;
 }
@@ -411,6 +452,26 @@ body.open {
 
 
 @media screen and (max-width: 499px) {
+/* 各種編集画面のアクションボタンレイアウト調整 */
+.bca-actions__main {
+  text-align: center;
+}
+
+/* テーマ設定レイアウト調整 */
+.bca-form-table__group {
+  display: flex;
+  flex-direction: column;
+}
+/* テーマ設定内サムネイル幅調整 */
+.photo {
+  max-width: 100%;
+}
+
+/* コンテンツ一覧等のパネルボックスのレイアウト調整 */
+.bca-radio-group {
+  display: block;
+}
+
 /* バルーンチップのウィンドウ幅調整（768px以上を含む） */
 .bt-content {
   max-width: 330px !important;
@@ -426,7 +487,7 @@ body.open {
   max-width: 330px !important;
 }
 .cke_dialog_contents_body {
-  max-width: 330px !important;
+  max-width: 310px !important;
   max-height: 400px !important;
 }
 .bca-search__input-list .bca-textbox {
@@ -527,12 +588,12 @@ margin: .5em 0;
   padding: 2px 12px !important;
 }
 
-/* ツールバーのロゴテキストを非表示 */
-.bca-toolbar .bca-toolbar__logo-text {
-  display: none !important;
+/* 追加 ロゴ周りマージン等の調整 */
+.bca-toolbar .bca-toolbar__logo {
+  padding: 0 12px 0 12px !important;
 }
-.bca-toolbar .bca-toolbar__logo-symbol {
-  border: none !important;
+.bca-toolbar__tools-edit a {
+  margin: 8px 0;
 }
 
 /* ツールバーの開発モード表示の簡素化 */
@@ -549,12 +610,5 @@ margin: .5em 0;
   background-color: red;
   padding: 3px 8px;
   border-radius: 11px;
-}
-
-/* ツールバーのシンボルロゴのマージン調整 */
-.bca-toolbar .bca-toolbar__logo-symbol {
-  border: none !important;
-  padding: 0 !important;
-  margin-right: 0 !important;
 }
 }

@@ -13,6 +13,7 @@ body {
   min-height: calc(100vh - 40px) !important;
 }
 
+
 @media screen and (max-width: 768px) {
 /* gridレイアウトをflexレイアウトに変更 */
 .bca-app {
@@ -53,8 +54,23 @@ body {
 .bca-toolbar__tools-mode span {
   padding: 3px 8px !important;
 }
+
+/* ツールバーのロゴテキストを非表示 */
+.bca-toolbar .bca-toolbar__logo-text {
+  display: none !important;
+}
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+}
+
+/* ツールバーのシンボルロゴのマージン調整 */
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
   
-/* ツールバーの編集する表示のアイコン化 */
+/* ツールバーの「編集する」表示のアイコン化 */
 .bca-toolbar__tools-button a {
   font-size: 0;
   background: none !important;
@@ -71,27 +87,6 @@ body {
   border-radius: 50%;
 }
 .bca-toolbar__tools-button-edit a:hover::before {
-  background-color: #ccc !important;
-  transition: all 0.5s ease;
-}
-
-/* ツールバーの「確認する」表示のアイコン化 */
-.bca-toolbar__tools-button a {
-  font-size: 0;
-  background: none !important;
-  transition: none;
-}
-.bca-toolbar__tools-button a:hover {
-  background: none !important;
-}
-.bca-toolbar__tools-button-publish a::before {
-  padding: 4px;
-  font-size: 10px !important;
-  color: #333;
-  background-color: #fff !important;
-  border-radius: 50%;
-}
-.bca-toolbar__tools-button-publish a:hover::before {
   background-color: #ccc !important;
   transition: all 0.5s ease;
 }
@@ -122,19 +117,12 @@ body {
   padding: 2px 12px !important;
 }
 
-/* ツールバーのロゴテキストを非表示 */
-.bca-toolbar .bca-toolbar__logo-text {
-  display: none !important;
+/* ツールバーのロゴ周りマージン等の調整 */
+.bca-toolbar .bca-toolbar__logo {
+  padding: 0 12px 0 12px !important;
 }
-.bca-toolbar .bca-toolbar__logo-symbol {
-  border: none !important;
-}
-
-/* ツールバーのシンボルロゴのマージン調整 */
-.bca-toolbar .bca-toolbar__logo-symbol {
-  border: none !important;
-  padding: 0 !important;
-  margin-right: 0 !important;
+.bca-toolbar__tools-edit a {
+  margin: 8px 0;
 }
 
 /* ツールバーの開発モード表示の簡素化 */
