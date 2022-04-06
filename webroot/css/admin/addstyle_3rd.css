@@ -87,9 +87,11 @@ body {
   flex-direction: column;
   margin-bottom: .5em;
 }
+
+/* コンテンツ一覧等のパネルボックスのレイアウト調整 */
 .bca-radio-group {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 /* 各種リスト等のオーバーフローの横スクロール対応 */
@@ -209,9 +211,6 @@ height: initial !important;
 /* ツールバーのロゴ周りレイアウト調整等 */
 .bca-toolbar .bca-toolbar__logo {
   padding: 0 12px 0 12px !important;
-}
-.bca-toolbar__tools-edit a {
-  margin: 8px 0;
 }
 .bca-toolbar .bca-toolbar__logo-symbol {
   border: none !important;
@@ -468,11 +467,6 @@ body.open {
 /* テーマ設定内サムネイル幅調整 */
 .photo {
   max-width: 100%;
-}
-
-/* コンテンツ一覧等のパネルボックスのレイアウト調整 */
-.bca-radio-group {
-  display: block;
 }
 
 /* バルーンチップのウィンドウ幅調整（768px以上を含む） */
