@@ -22,6 +22,14 @@ body {
   min-height: calc(100vh - 40px);
 }
 
+/* クレジット画面のレイアウトの修正 */
+#CreditScrollerInner {
+  width: auto;
+}
+#CreditScroller ul {
+  padding-left: 0;
+}
+
 /* ログイン画面のレイアウト調整 */
 .bca-login {
   margin: 20px auto;
