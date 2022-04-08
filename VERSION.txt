@@ -1,7 +1,11 @@
-1.0.3
+1.0.4
 
 
 // Release Notes //
+
+[2022-04-07] AdminMakeResponsive-1.0.4
+- #2バグfix。
+- #4バグfix。
 
 [2022-04-07] AdminMakeResponsive-1.0.3
 - ログイン画面背景のクレジット表記のレイアウトを修正漏れ。
