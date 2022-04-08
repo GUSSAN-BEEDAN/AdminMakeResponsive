@@ -52,11 +52,13 @@ body {
   background-color: #444 !important;
 }
 .bca-toolbar__users > ul > li:nth-child(2) a::before {
-  content: "\f021";
-  font-family: 'Font Awesome 5 Free';
-  font-size:12px;
-  font-weight: 900;
-  color: #fff;
+  content: "";
+  font-size:0;
+}
+.bca-toolbar__users > ul > li:nth-child(2) a::before {
+  background-image: url(../../img/admin/icon/sync-solid.svg) !important;
+  width: 12px !important;
+  height: 12px !important;
 }
 
 .bca-toolbar__tools-mode span {
@@ -85,26 +87,39 @@ body {
 .bca-toolbar__tools-edit a {
   margin: 8px 0;
 }
-  
+ 
 /* ツールバーの「編集する」表示のアイコン化 */
-.bca-toolbar__tools-button a {
+.bca-toolbar__tools-button a,
+.bca-toolbar__tools-edit a {
   font-size: 0;
   background: none !important;
   transition: none;
 }
-.bca-toolbar__tools-button a:hover {
+.bca-toolbar__tools-button a:hover,
+.bca-toolbar__tools-edit a:hover {
   background: none !important;
 }
-.bca-toolbar__tools-button-edit a::before {
-  padding: 4px;
-  font-size: 10px !important;
-  color: #333;
+.bca-toolbar__tools-button-edit a::before,
+.bca-toolbar__tools-edit a::before {
+  background-image: url(../../img/admin/icon/pencil-alt-solid.svg) !important;
+  width: 13px !important;
+  height: 13px !important;
+  background-position: center;
+  background-size: 50%;
   background-color: #fff !important;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  line-height: initial;
+  padding: 4px;
 }
-.bca-toolbar__tools-button-edit a:hover::before {
+.bca-toolbar__tools-button-edit a:hover::before,
+.bca-toolbar__tools-edit a:hover::before {
   background-color: #ccc !important;
   transition: all 0.5s ease;
+}
+.bca-toolbar__tools-edit {
+  line-height: 1.15;
 }
 }
 

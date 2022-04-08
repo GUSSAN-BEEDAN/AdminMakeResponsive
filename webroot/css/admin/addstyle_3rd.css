@@ -173,49 +173,13 @@ body {
   background-color: #444 !important;
 }
 .bca-toolbar__users > ul > li:nth-child(2) a::before {
-  content: "\f021";
-  font-family: 'Font Awesome 5 Free';
-  font-size:12px;
-  font-weight: 900;
-  color: #fff;
+  content: "";
+  font-size:0;
 }
-
-/* ツールバーの「確認する」表示のアイコン化 */
-.bca-toolbar__tools-button a {
-  font-size: 0;
-  background: none !important;
-  transition: none;
-}
-.bca-toolbar__tools-button a:hover {
-  background: none !important;
-}
-/* v4.4.8以前のバージョンに対応 */
-.bca-toolbar__tools-button-publish a::before {
-  content: "\f06e";
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
-  padding: 4px;
-  font-size: 10px !important;
-  color: #333 !important;
-  background-color: #fff !important;
-  border-radius: 50%;
-background-image: none !important;
-width: initial !important;
-height: initial !important;
-}
-.bca-toolbar__tools-button-publish a:hover::before {
-  background-color: #ccc !important;
-  transition: all 0.5s ease;
-}
-
-/* ツールバーのロゴ周りレイアウト調整等 */
-.bca-toolbar .bca-toolbar__logo {
-  padding: 0 12px 0 12px !important;
-}
-.bca-toolbar .bca-toolbar__logo-symbol {
-  border: none !important;
-  padding: 0 !important;
-  margin-right: 0 !important;
+.bca-toolbar__users > ul > li:nth-child(2) a::before {
+  background-image: url(../../img/admin/icon/sync-solid.svg) !important;
+  width: 12px !important;
+  height: 12px !important;
 }
 
 /* ツールバーのロゴテキストを非表示 */
@@ -224,6 +188,52 @@ height: initial !important;
 }
 .bca-toolbar .bca-toolbar__logo-symbol {
   border: none !important;
+}
+
+/* ツールバーのシンボルロゴのマージン調整 */
+.bca-toolbar .bca-toolbar__logo-symbol {
+  border: none !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ツールバーのロゴ周りレイアウト調整等 */
+.bca-toolbar .bca-toolbar__logo {
+  padding: 0 12px 0 12px !important;
+}
+.bca-toolbar__tools-edit a {
+  margin: 8px 0;
+}
+
+/* ツールバーの「確認する」表示のアイコン化 */
+.bca-toolbar__tools-button a,
+.bca-toolbar__tools-edit a {
+  font-size: 0;
+  background: none !important;
+  transition: none;
+}
+.bca-toolbar__tools-button a:hover,
+.bca-toolbar__tools-edit a:hover {
+  background: none !important;
+}
+.bca-toolbar__tools-button-publish a::before,
+.bca-toolbar__tools-edit a::before {
+  background-image: url(../../img/admin/icon/eye-regular.svg) !important;
+  width: 13px !important;
+  height: 13px !important;
+  background-position: center;
+  background-size: 50%;
+  background-color: #fff !important;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  line-height: initial;
+  padding: 4px;
+}
+.bca-toolbar__tools-button-publish a:hover::before,
+.bca-toolbar__tools-edit a:hover::before {
+  background-color: #ccc !important;
+  transition: all 0.5s ease;
 }
 
 /* 固定ページ編集　関連コンテンツ横スクロール */
