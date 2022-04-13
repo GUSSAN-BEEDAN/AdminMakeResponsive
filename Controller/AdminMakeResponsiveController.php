@@ -1,9 +1,6 @@
 <?php 
-App::import('Controller', 'Plugins');
-#class AdminMakeResponsiveController extends BcPluginAppController {
 class AdminMakeResponsiveController extends AppController {
-	public $name = 'AdminMakeResponsive';
-	public $uses = ['Plugin', 'Content', 'AdminMakeResponsive.AdminMakeResponsive'];
+	public $uses = ['Content', 'AdminMakeResponsive.AdminMakeResponsive'];
 	public $components = ['BcAuth','Cookie','BcAuthConfigure'];
 	public function admin_index() {
 		if (empty($this->request->data)) {
