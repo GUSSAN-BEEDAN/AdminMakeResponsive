@@ -1,7 +1,10 @@
-1.0.4
-
+1.1.0
 
 // Release Notes //
+
+[2022-04-18] AdminMakeResponsive-1.1.0
+- #1管理側のみのテーマカラー変更機能の追加。
+- #1に伴うデータベース構造の変更。
 
 [2022-04-07] AdminMakeResponsive-1.0.4
 - #2バグfix。
