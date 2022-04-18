@@ -3,7 +3,7 @@ baserCMSのadmin-third、admin-secondの両テーマ共にレスポンシブ化�
 （admin-secondは、Daruma&Namio(tsukurun)さん作成の「adminGoResponsiveプラグイン」のcssおよびjsを利用させていただきました。）
 
 
-https://user-images.githubusercontent.com/96756270/161261983-1af4d21d-f6df-4071-aae2-fc061e87a828.mp4
+https://user-images.githubusercontent.com/96756270/163811189-062c44cd-e944-46b2-a772-52588098460c.mp4
 
 
 ## 要件・仕様など
