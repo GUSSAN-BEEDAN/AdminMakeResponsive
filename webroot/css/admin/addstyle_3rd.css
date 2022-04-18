@@ -460,6 +460,22 @@ body.open {
 .bca-list-num {
   justify-content: flex-start;
 }
+
+/* カラーピッカーのレイアウト調整（暫定対応） */
+#AdminAdminMakeResponsiveAdminMakeResponsiveIndex .colpick_hex {
+  left: 0px !important;
+  right: 0px !important;
+  margin-top: -250px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.colpick_hex {
+  left: 0px !important;
+  right: 0px !important;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;  
+}
 }
 
 
