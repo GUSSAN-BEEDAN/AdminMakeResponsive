@@ -1,0 +1,1 @@
+<link rel="stylesheet" type="text/css" href="/admin_make_responsive/css/admin/addcolor_3rd.css<?php echo '?' . @filemtime(APP . 'Plugin' . DS . 'AdminMakeResponsive' . DS . 'webroot' . DS . 'css' . DS . 'admin' . DS . 'addcolor_3rd.css'); ?>">

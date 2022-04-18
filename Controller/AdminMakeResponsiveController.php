@@ -6,10 +6,11 @@ class AdminMakeResponsiveController extends AppController {
 		if (empty($this->request->data)) {
 			$this->data = $this->AdminMakeResponsive->find('first');
 		} else {
+			$this->AdminMakeResponsive->addColorConfig($this->request->data);
 			$this->AdminMakeResponsive->set($this->request->data['AdminMakeResponsive']);
 			$id = $this->request->data['AdminMakeResponsive']['id'];
 			if ($this->AdminMakeResponsive->save(['conditions' => ['id' => $id]])) {
-				$message = '設定を更新しました。';
+				$message = '管理画面 レスポンシブ化プラグインの設定を更新しました。';
 				$this->setMessage($message, false, true);
 				clearViewCache();
 				$this->redirect(['controller' => 'admin_make_responsive', 'action' => 'index']);
