@@ -32,11 +32,22 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 					$View->append('css', $AdminMakeResponsive);	
 				}
 			} else if (Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third') {
-				// admin-third（ユーザー画面上管理ツールバー）
-				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
-				$View->end();
-				$View->append('css', $AdminMakeResponsive);
+				if ((isset($setdatas))
+					&&(isset($setdatas['admin_color_enable']))
+					&&($setdatas['admin_color_enable'] == 1)) {
+					// admin-third（ユーザー画面上管理ツールバー）（テーマカラー有効）
+					$View->start('admin_make_responsive');
+					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
+					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addcolorfiles',['setdatas' => $setdatas]);
+					$View->end();
+					$View->append('css', $AdminMakeResponsive);
+				} else {
+					// admin-third（ユーザー画面上管理ツールバー）（テーマカラー無効）
+					$View->start('admin_make_responsive');
+					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
+					$View->end();
+					$View->append('css', $AdminMakeResponsive);
+				}				
 			} else {
 				// admin-second（管理画面、ユーザー画面上管理ツールバー共通）
 				$View->start('admin_make_responsive');
