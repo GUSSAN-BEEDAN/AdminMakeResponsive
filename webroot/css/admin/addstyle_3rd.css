@@ -219,16 +219,16 @@ body {
 .bca-toolbar__tools-button-publish a::before,
 .bca-toolbar__tools-edit a::before {
   background-image: url(../../img/admin/icon/eye-regular.svg) !important;
-  width: 13px !important;
-  height: 13px !important;
+  width: 20px !important;
+  height: 20px !important;
   background-position: center;
-  background-size: 50%;
+  background-size: 55%;
   background-color: #fff !important;
   border-radius: 50%;
   background-repeat: no-repeat;
   vertical-align: middle;
   line-height: initial;
-  padding: 4px;
+  padding: 0px;
 }
 .bca-toolbar__tools-button-publish a:hover::before,
 .bca-toolbar__tools-edit a:hover::before {
