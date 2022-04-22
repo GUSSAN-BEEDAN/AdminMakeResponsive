@@ -102,6 +102,11 @@ body {
   overflow-x: scroll;
 }
 
+/* コンテンツリストのファンクションアイコンエリアがオーバーフローしてしまう対策 */
+.jstree-proton .jstree-container-ul .jstree-node {
+  margin-right: 50px;
+}
+
 /* コメント一覧等で、コメントの文字数が多い場合、リストが縦に長くなってしまうのを防止。*/
 .bca-table-listup {
   width: max-content;
