@@ -104,12 +104,20 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 					// ＋レスポンシブ無効　＋テーマカラー無効
 					return;
 				}
-			} else {
+			} else if (
+				(isset($setdatas))
+				&&(isset($setdatas['flg_enable']))
+				&&($setdatas['flg_enable'] == 1)
+			) {
 				// admin-second（管理画面、ユーザー画面上管理ツールバー 共通）
+				// ＋レスポンシブ有効
 				$View->start('admin_make_responsive');
 				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_addfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
+			} else {
+				// ＋レスポンシブ無効
+				return;
 			}
 		} else if (
 			(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
