@@ -69,5 +69,35 @@ class AdminMakeResponsive extends AppModel {
 		$File->write($config);
 		$File->close();
 	}
+
+
+/**
+ * テーマカラー設定を保存する（toolbarおよびログイン画面用）
+ * 
+ */
+	public function addColorConfigToolbar($data){
+		$configPath = APP . 'Plugin' . DS . 'AdminMakeResponsive' . DS . 'Lib' . DS . 'addcolorconfig_toolbar.css';
+		if (!file_exists($configPath)) {
+			return false;
+		}
+		$File = new File($configPath);
+		$config = $File->read();
+		$settings = [
+			'ADMINMAIN' => 'admin_color_main',
+			'ADMINSUB' => 'admin_color_sub'
+		];
+		$settingExists = false;
+		foreach($settings as $key => $setting) {
+			if (empty($data['AdminMakeResponsive'][$setting])) {
+				$config = preg_replace("/\n.+?" . $key . ".+?\n/", "\n", $config);
+			} else {
+				$config = str_replace($key, '#' . $data['AdminMakeResponsive'][$setting], $config);
+				$settingExists = true;
+			}
+		}
+		$File = new File(APP . 'Plugin' . DS . 'AdminMakeResponsive' . DS . 'webroot' . DS . 'css' . DS . 'admin' . DS . 'addcolor_3rd_toolbar.css', true, 0644);
+		$File->write($config);
+		$File->close();
+	}
 }
 	

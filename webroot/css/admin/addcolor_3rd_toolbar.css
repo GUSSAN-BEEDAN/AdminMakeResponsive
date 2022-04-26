@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* v4.5.6時点でのadmin-third管理画面のstyle.cssおよびtoolbar.cssを対象に作成 */
+/* toolbar.cssに対する上書き */
+.bca-toolbar__users > ul > li.active > ul a:hover {
+    }
+
+
+/* style.cssに対する上書き */
+/* ログイン画面 */
+/* color */
+.bca-login__title {
+    }
+.bca-login-forgot-pass a {
+    }
+    
+/* linear-gradient */
+.bca-btn-icon[data-bca-btn-type=login] {
+    }
+.bca-btn-icon[data-bca-btn-type=login]:hover, .bca-btn-icon[data-bca-btn-type=login]:focus {
+    }
+.bca-btn[data-bca-btn-type=login] {
+    }
+.bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
+    }
+    
+/* border-color */
+/* box-shadow */
+.bca-login-form-item .bca-textbox .bca-textbox__input:focus {
+    }
+.bca-btn:focus, .ui-dialog-buttonset button:focus, .button-small:focus {
+    }
+
+.bca-btn-icon[data-bca-btn-type=login] {
+    }
+.bca-btn-icon-text[data-bca-btn-type=login] {
+    }
+.bca-btn[data-bca-btn-type=login] {
+    }

@@ -7,6 +7,7 @@ class AdminMakeResponsiveController extends AppController {
 			$this->data = $this->AdminMakeResponsive->find('first');
 		} else {
 			$this->AdminMakeResponsive->addColorConfig($this->request->data);
+			$this->AdminMakeResponsive->addColorConfigToolbar($this->request->data);
 			$this->AdminMakeResponsive->set($this->request->data['AdminMakeResponsive']);
 			$id = $this->request->data['AdminMakeResponsive']['id'];
 			if ($this->AdminMakeResponsive->save(['conditions' => ['id' => $id]])) {
