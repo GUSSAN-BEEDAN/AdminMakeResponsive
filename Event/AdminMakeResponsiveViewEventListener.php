@@ -4,13 +4,14 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 		'beforeLayout',
 	];
 	public function beforeLayout(CakeEvent $event) {
+		
+		$View = $event->subject();
+		App::import('Model', 'AdminMakeResponsive.AdminMakeResponsive');
+		$_setdatas = new AdminMakeResponsive();
+		$setdatas = $_setdatas->getSetdatas();
+		
 		if (BcUtil::loginUser()) {
 			// ログイン時
-			$View = $event->subject();
-			App::import('Model', 'AdminMakeResponsive.AdminMakeResponsive');
-			$_setdatas = new AdminMakeResponsive();
-			$setdatas = $_setdatas->getSetdatas();
-
 			if (
 				(isset($setdatas))
 				&&(isset($setdatas['flg_enable']))
@@ -123,11 +124,6 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 			(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
 		) {
 			// ログオフ時 admin-third（ログイン画面対象）
-			$View = $event->subject();
-			App::import('Model', 'AdminMakeResponsive.AdminMakeResponsive');
-			$_setdatas = new AdminMakeResponsive();
-			$setdatas = $_setdatas->getSetdatas();
-
 			if (
 				(isset($setdatas))
 				&&(isset($setdatas['flg_enable']))
@@ -167,11 +163,6 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 			}
 		} else {
 			// ログオフ時 admin-second（ログイン画面対象）
-			$View = $event->subject();
-			App::import('Model', 'AdminMakeResponsive.AdminMakeResponsive');
-			$_setdatas = new AdminMakeResponsive();
-			$setdatas = $_setdatas->getSetdatas();
-
 			$View->start('admin_make_responsive');
 			$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_go_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
 			$View->end();
