@@ -26,9 +26,6 @@ tr .bca-table-listup__thead-th--select a {
 tr .bca-table-listup__thead-th--select a .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
     color: ADMINMAIN; 
     }
-.bca-login__title {
-    color: ADMINMAIN; 
-    }
 .bca-btn[data-bca-btn-category=text] {
     color: ADMINMAIN; 
     }
@@ -91,21 +88,6 @@ tr .bca-table-listup__thead-th--select a .bca-btn-icon-text[data-bca-btn-type=dr
     }
 .jstree-proton .jstree-container-ul .jstree-node .jstree-wholerow-clicked {
     background: ADMINMAIN !important; 
-    }
-
-
-/* linear-gradient */
-.bca-btn-icon[data-bca-btn-type=login] {
-    background-image: linear-gradient(ADMINMAIN 10%, ADMINSUB 100%); 
-    }
-.bca-btn-icon[data-bca-btn-type=login]:hover, .bca-btn-icon[data-bca-btn-type=login]:focus {
-    background-image: linear-gradient(ADMINSUB 10%, ADMINSUB 100%); 
-    }
-.bca-btn[data-bca-btn-type=login] {
-    background-image: linear-gradient(ADMINMAIN 10%, ADMINSUB 100%); 
-    }
-.bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
-    background-image: linear-gradient(ADMINSUB 10%, ADMINSUB 100%); 
     }
 
  
@@ -173,17 +155,6 @@ tr .bca-table-listup__thead-th--select a .bca-btn-icon-text[data-bca-btn-type=dr
     }
 .cke_dialog .bca-btn:focus {
     box-shadow: 0 0 4px 0px ADMINMAIN; 
-    }
-
-
-.bca-btn-icon[data-bca-btn-type=login] {
-    border: 1px solid ADMINSUB; 
-    }
-.bca-btn-icon-text[data-bca-btn-type=login] {
-    border: 1px solid ADMINSUB; 
-    }
-.bca-btn[data-bca-btn-type=login] {
-    border: 1px solid ADMINSUB; 
     }
 
 
