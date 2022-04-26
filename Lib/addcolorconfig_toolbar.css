@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* v4.5.6時点でのadmin-third管理画面のstyle.cssおよびtoolbar.cssを対象に作成 */
+/* toolbar.cssに対する上書き */
+.bca-toolbar__users > ul > li.active > ul a:hover {
+    background-color: ADMINMAIN !important; 
+    }
+
+
+/* style.cssに対する上書き */
+/* ログイン画面 */
+/* color */
+.bca-login__title {
+    color: ADMINMAIN; 
+    }
+.bca-login-forgot-pass a {
+    color: ADMINMAIN; 
+    }
+    
+/* linear-gradient */
+.bca-btn-icon[data-bca-btn-type=login] {
+    background-image: linear-gradient(ADMINMAIN 10%, ADMINSUB 100%); 
+    }
+.bca-btn-icon[data-bca-btn-type=login]:hover, .bca-btn-icon[data-bca-btn-type=login]:focus {
+    background-image: linear-gradient(ADMINSUB 10%, ADMINSUB 100%); 
+    }
+.bca-btn[data-bca-btn-type=login] {
+    background-image: linear-gradient(ADMINMAIN 10%, ADMINSUB 100%); 
+    }
+.bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
+    background-image: linear-gradient(ADMINSUB 10%, ADMINSUB 100%); 
+    }
+    
+/* border-color */
+/* box-shadow */
+.bca-login-form-item .bca-textbox .bca-textbox__input:focus {
+    border-color: ADMINMAIN; 
+    }
+.bca-btn:focus, .ui-dialog-buttonset button:focus, .button-small:focus {
+    box-shadow: 0 0 4px 0px ADMINMAIN; 
+    }
+
+.bca-btn-icon[data-bca-btn-type=login] {
+    border: 1px solid ADMINSUB; 
+    }
+.bca-btn-icon-text[data-bca-btn-type=login] {
+    border: 1px solid ADMINSUB; 
+    }
+.bca-btn[data-bca-btn-type=login] {
+    border: 1px solid ADMINSUB; 
+    }
