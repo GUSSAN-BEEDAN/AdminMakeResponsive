@@ -77,7 +77,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 					// ＋レスポンシブ有効　＋テーマカラー有効
 					$View->start('admin_make_responsive');
 					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
-					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addcolorfiles',['setdatas' => $setdatas]);
+					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addcolorfiles',['setdatas' => $setdatas]);
 					$View->end();
 					$View->append('css', $AdminMakeResponsive);
 				} else if (
@@ -97,7 +97,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 				) {
 					// ＋レスポンシブ無効　＋テーマカラー有効
 					$View->start('admin_make_responsive');
-					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addcolorfiles',['setdatas' => $setdatas]);
+					$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addcolorfiles',['setdatas' => $setdatas]);
 					$View->end();
 					$View->append('css', $AdminMakeResponsive);
 				} else {
@@ -138,7 +138,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 				// ＋レスポンシブ有効　＋テーマカラー有効
 				$View->start('admin_make_responsive');
 				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addfiles',['setdatas' => $setdatas]);
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addcolorfiles',['setdatas' => $setdatas]);
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addcolorfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			} else if (
@@ -158,7 +158,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 			) {
 				// ＋レスポンシブ無効　＋テーマカラー有効
 				$View->start('admin_make_responsive');
-				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_addcolorfiles',['setdatas' => $setdatas]);
+				$AdminMakeResponsive = $View->element('AdminMakeResponsive.admin/admin_make_responsive_toolbar_addcolorfiles',['setdatas' => $setdatas]);
 				$View->end();
 				$View->append('css', $AdminMakeResponsive);
 			} else {
