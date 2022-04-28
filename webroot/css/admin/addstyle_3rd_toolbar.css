@@ -13,6 +13,11 @@ body {
   min-height: calc(100vh - 40px) !important;
 }
 
+/* フロント認証等でツールバーを使用する場合（縦中央配置） */
+.bca-toolbar .bca-toolbar__logo {
+  align-items: center !important;
+}
+
 
 @media screen and (max-width: 768px) {
 /* gridレイアウトをflexレイアウトに変更 */
