@@ -59,6 +59,10 @@ body {
 #ToolBar {
 	z-index: 10000 !important;
 }
+/* アップローダーパネル、画像のアスペクト比崩れ予防（768px以上を含む） */
+#DivPanelList .selectable-file img{
+	object-fit: cover;
+}
 
 
 @media screen and (max-width: 900px) {
