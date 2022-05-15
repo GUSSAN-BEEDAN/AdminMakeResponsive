@@ -21,13 +21,13 @@ admin-third管理テーマについては、基本的にデフォルトのstyle.
 
 
 ## インストール
-1. 圧縮ファイルを解凍後、生成されたフォルダ名 AdminMakeResponsive［-masterやバージョン名］を AdminMakeResponsive にリネームし、/app/Plugin/AdminMakeResponsive として配置します。
+1. 圧縮ファイルを解凍後、生成されたフォルダ名 「AdminMakeResponsive-master」 や 「AdminMakeResponsive-バージョン名」 を 「AdminMakeResponsive」 にリネームし、/app/Plugin/AdminMakeResponsive として配置します。
 2. 管理画面のプラグイン管理に入り、表示されている AdminMakeResponsive プラグイン をインストールして下さい。
 3. プラグインのインストール後、AdminMakeResponsive 管理ページにアクセスして設定を行なってください。
 
 
 ## アップデート
-1. 圧縮ファイルを解凍後、生成されたフォルダ名 AdminMakeResponsive［-masterやバージョン名］を AdminMakeResponsive にリネームし、既存の/app/Plugin/AdminMakeResponsive を上書きします。
+1. CodeボタンあるいはReleasesからダウンロードした圧縮ファイルを解凍後、生成されたフォルダ名 AdminMakeResponsive［-masterやバージョン名］を AdminMakeResponsive にリネームし、既存の/app/Plugin/AdminMakeResponsive を上書きします。
 2. 管理画面のプラグイン管理に入り、表示されている AdminMakeResponsive プラグイン をアップデートして下さい。
 
 
