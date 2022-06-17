@@ -45,7 +45,7 @@ $this->BcBaser->js(['admin/vendors/colpick'], false);
 	<li>画面のレイアウトが崩れるなど表示かおかしい場合は、baserCMSおよびブラウザのキャッシュをクリアするなどしてみてください。</li>
 	<li>それでも画面のレイアウトが崩れるなどの問題が改善しない場合は、チェックボックスをオフにしてください。</li>
 </ul>
-<?php if (Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third'): ?>
+<?php if (Configure::read('BcSite.admin_theme') === 'admin-third' || $this->BcBaser->siteConfig['admin_theme'] === 'admin-third'): ?>
 <br>
 <p>管理画面のテーマカラーを変更します。（admin-thirdのみ対応）</p>
 <ul>
@@ -67,7 +67,7 @@ $this->BcBaser->js(['admin/vendors/colpick'], false);
 			<?php echo $this->BcForm->error('AdminMakeResponsive.flg_enable') ?>
 		</td>
 	</tr>
-	<?php if (Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third'): ?>
+	<?php if (Configure::read('BcSite.admin_theme') === 'admin-third' || $this->BcBaser->siteConfig['admin_theme'] === 'admin-third'): ?>
 		<tr>
 			<th class="col-head bca-form-table__label">
 				<?php echo __d('baser', '管理テーマカラー') ?>
