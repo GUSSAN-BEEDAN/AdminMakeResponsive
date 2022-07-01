@@ -118,8 +118,24 @@ body {
   line-height: initial;
   padding: 0px;
 }
+.bca-toolbar__tools-button-add a::before,
+.bca-toolbar__tools-add a::before {
+  background-image: url(../../img/admin/icon/plus-circle-solid.svg) !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-position: center;
+  background-size: 50%;
+  background-color: #fff !important;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  line-height: initial;
+  padding: 0px;
+}
 .bca-toolbar__tools-button-edit a:hover::before,
-.bca-toolbar__tools-edit a:hover::before {
+.bca-toolbar__tools-button-add a:hover::before,
+.bca-toolbar__tools-edit a:hover::before,
+.bca-toolbar__tools-add a:hover::before {
   background-color: #ccc !important;
   transition: all 0.5s ease;
 }
