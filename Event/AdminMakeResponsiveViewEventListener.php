@@ -24,7 +24,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 		if (BcUtil::loginUser()) {
 		// ログイン時
 			if ((BcUtil::isAdminSystem())
-				&&(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
+				&&(Configure::read('BcSite.admin_theme') === 'admin-third' || $this->BcBaser->siteConfig['admin_theme'] === 'admin-third')
 			) {
 			// admin-third（管理画面）
 				if (
@@ -65,7 +65,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 					return;
 				}
 			} else if (
-				(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
+				(Configure::read('BcSite.admin_theme') === 'admin-third' || $this->BcBaser->siteConfig['admin_theme'] === 'admin-third')
 			) {
 			// admin-third（ユーザー画面上管理ツールバー）
 				if (
@@ -121,7 +121,7 @@ class AdminMakeResponsiveViewEventListener extends BcViewEventListener {
 				return;
 			}
 		} else if (
-			(Configure::read('BcSite.admin_theme') === 'admin-third' || $View->viewVars['siteConfig']['admin_theme'] === 'admin-third')
+			(Configure::read('BcSite.admin_theme') === 'admin-third' || $this->BcBaser->siteConfig['admin_theme'] === 'admin-third')
 		) {
 		// ログオフ時 admin-third（ログイン画面対象）
 			if (
