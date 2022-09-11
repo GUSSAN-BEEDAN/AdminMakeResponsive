@@ -3,7 +3,14 @@
  * admin-third管理テーマログイン画面用
  */
 
- 
+/* ログイン画面のロゴ幅変更 */
+.bca-login__logo {
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 120px;
+}
+
 /* 意図しないオーバーフローを調整、等（768px以上を意図する） */
 body {
   min-width: initial;
