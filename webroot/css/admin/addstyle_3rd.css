@@ -68,6 +68,11 @@ body {
   flex: 1;
 }
 
+/* mainのオーバーフローの横方向スクロールを実現するため */
+.bca-main {
+  width: 100vw;
+}
+
 /* クレジット画面のレイアウトの修正 */
 #CreditScrollerInner {
   width: auto;
@@ -125,6 +130,15 @@ body {
 #WidgetSetting {
   width: 700px !important;
   padding-right: 20px;  
+}
+
+/* テーマ一覧画面のレイアウト調整 */
+.bca-current-theme__inner {
+  display: flex;
+  flex-direction: column;
+}
+.bca-current-theme__main {
+  width: 100%;
 }
   
 /* CKEditorのダイアログ表示幅を調整 */
